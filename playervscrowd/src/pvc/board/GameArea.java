@@ -12,17 +12,23 @@ public class GameArea {
 		
 	}
 	
-	public int getCrowd(String mTypeId){
+	public Crowd getCrowd(){
 		
-		int total = 0;
+		Crowd crowd = null;
 		
 		for (GameSpace gSpace: spaces){
 			
-			total += gSpace.getCrowd(mTypeId);
+			if (crowd == null)
+				
+				crowd = gSpace.getCrowd();
+			
+			else
+				
+				crowd.addCrowd(gSpace.getCrowd());
 			
 		}
 		
-		return total;
+		return crowd;
 		
 	}
 		

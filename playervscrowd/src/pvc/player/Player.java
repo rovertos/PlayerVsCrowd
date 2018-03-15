@@ -1,18 +1,23 @@
 package pvc.player;
 
 import java.util.List;
-import pvc.mover.MoverType;
+
+import pvc.mover.Mover;
 
 public abstract class Player {
 
 	public final String id;
 	
-	public Player(String id, List<MoverType> mTypes){
+	public final String typeId;
+	
+	public Player(String id, String typeId){
 		
-		this.id = id;				
+		this.id = id;
 		
+		this.typeId = typeId;
+	
 	}
 	
-	
+	abstract public List<? extends Mover> getMover(String mTypeId);
 	
 }

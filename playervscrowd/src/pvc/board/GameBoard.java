@@ -1,7 +1,7 @@
 package pvc.board;
 
-public interface GameBoard {
+abstract public class GameBoard {
 
-	public GameSpace getSpace(Location loc);
+	abstract public GameSpace getSpace(Location loc);
 	
 }

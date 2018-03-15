@@ -1,6 +1,6 @@
 package pvc.mover;
 
-public class Mover {
+public abstract class Mover {
 
 	public final String typeId;
 	
