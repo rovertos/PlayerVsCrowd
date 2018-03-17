@@ -10,4 +10,6 @@ abstract public class GameBoard {
 	
 	abstract public List<? extends GameArea> getAreas(Location loc);
 	
+	abstract public List<? extends GameArea> getAllAreas();
+	
 }

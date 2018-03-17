@@ -9,7 +9,7 @@ public class BoardJSON implements Serializable {
 
 	private List<SpaceJSON> spaces;
 	
-	private List<TransformerJSON> transformers;
+	private List<TransformerTypeJSON> ttypes;
 
 	public List<SpaceJSON> getSpaces() {
 		return spaces;
@@ -19,12 +19,12 @@ public class BoardJSON implements Serializable {
 		this.spaces = spaces;
 	}
 
-	public List<TransformerJSON> getTransformers() {
-		return transformers;
+	public List<TransformerTypeJSON> getTtypes() {
+		return ttypes;
 	}
 
-	public void setTransformers(List<TransformerJSON> transformers) {
-		this.transformers = transformers;
-	}	
+	public void setTtypes(List<TransformerTypeJSON> ttypes) {
+		this.ttypes = ttypes;
+	}
 	
 }

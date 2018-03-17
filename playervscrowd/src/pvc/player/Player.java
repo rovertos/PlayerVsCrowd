@@ -20,12 +20,29 @@ public abstract class Player implements Comparable<Player> {
 	
 	abstract public List<? extends Mover> getMover(String mTypeId);
 	
-	abstract public int getScore();
-	
+	abstract public int getScore();	
+
 	public int compareTo(Player otherPlayer) {
 		
 		return this.getScore() - otherPlayer.getScore();
 		
+	}
+	
+	public String getId() {
+		return id;
 	}	
+	
+	@Override	
+	public boolean equals(Object otherPlayer){
+		
+		if (otherPlayer instanceof Player)
+			
+			return this.id.equals(((Player) otherPlayer).getId());
+		
+		else
+			
+			return false;
+		
+	}
 	
 }

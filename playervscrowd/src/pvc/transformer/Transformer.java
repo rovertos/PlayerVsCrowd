@@ -22,6 +22,23 @@ public abstract class Transformer {
 	
 	abstract public void transform();
 	
-	abstract public String getForm();
+	abstract public String getForm();	
+	
+	public String getId() {
+		return id;
+	}
+
+	@Override	
+	public boolean equals(Object otherTransformer){
+		
+		if (otherTransformer instanceof Transformer)
+			
+			return this.id.equals(((Transformer) otherTransformer).getId());
+		
+		else
+			
+			return false;
+		
+	}	
 	
 }

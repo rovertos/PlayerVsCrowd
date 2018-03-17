@@ -1,4 +1,4 @@
-package pvc.engine;
+package pvc.game;
 
 import java.util.List;
 
@@ -20,8 +20,12 @@ public abstract class PvcGame {
 	
 	// --------
 	
-	abstract public GameBoard getBoard();
+	public PvcGameConfig getConfig() {		
+		return config;		
+	}	
 	
+	abstract public GameBoard getBoard();
+
 	abstract public List<? extends Player> getPlayers(String pTypeId);
 	
 	abstract public List<? extends Transformer> getTransformers(String tTypeId);
