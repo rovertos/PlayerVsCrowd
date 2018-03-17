@@ -1,5 +1,7 @@
 package pvc.mover;
 
+import pvc.environment.GameSpace;
+
 public abstract class Mover {
 
 	public final String typeId;
@@ -9,5 +11,7 @@ public abstract class Mover {
 		this.typeId = typeId;
 		
 	}
+	
+	abstract public GameSpace getPosition();
 	
 }

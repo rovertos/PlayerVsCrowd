@@ -4,7 +4,7 @@ import java.util.List;
 
 import pvc.mover.Mover;
 
-public abstract class Player {
+public abstract class Player implements Comparable<Player> {
 
 	public final String id;
 	
@@ -19,5 +19,13 @@ public abstract class Player {
 	}
 	
 	abstract public List<? extends Mover> getMover(String mTypeId);
+	
+	abstract public int getScore();
+	
+	public int compareTo(Player otherPlayer) {
+		
+		return this.getScore() - otherPlayer.getScore();
+		
+	}	
 	
 }
