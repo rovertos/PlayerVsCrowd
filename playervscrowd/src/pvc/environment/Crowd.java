@@ -8,8 +8,12 @@ abstract public class Crowd {
 		
 		this.moverTypeId = moverTypeId;
 		
-	}
+	}	
 	
+	public String getMoverTypeId() {
+		return moverTypeId;
+	}
+
 	abstract public int getTotal();
 	
 	abstract public Trend getTrend();
